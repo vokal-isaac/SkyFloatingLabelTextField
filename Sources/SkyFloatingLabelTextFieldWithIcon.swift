@@ -48,7 +48,7 @@ open class SkyFloatingLabelTextFieldWithIcon: SkyFloatingLabelTextField {
 
     /// A UIImage value that determines the image that the icon is using
     @IBInspectable
-    dynamic open var iconImage: UIImage? {
+    @objc dynamic open var iconImage: UIImage? {
         didSet {
             // Show a warning if setting an image while the iconType is IconType.font
             if self.iconType == .font { NSLog("WARNING - Did set iconImage when the iconType is set to IconType.font. The image will not be displayed.") } // swiftlint:disable:this line_length
@@ -58,7 +58,7 @@ open class SkyFloatingLabelTextFieldWithIcon: SkyFloatingLabelTextField {
 
     /// A Bool value that determines if the UIImage should be templated or not
     @IBInspectable
-    dynamic open var templateImage: Bool = true {
+    @objc dynamic open var templateImage: Bool = true {
         didSet {
             if templateImage {
                    let templatedOriginalImage = self.iconImageView.image?
@@ -90,7 +90,7 @@ open class SkyFloatingLabelTextFieldWithIcon: SkyFloatingLabelTextField {
 
     /// A UIColor value that determines the color of the icon in the normal state
     @IBInspectable
-    dynamic open var iconColor: UIColor = UIColor.gray {
+    @objc dynamic open var iconColor: UIColor = UIColor.gray {
         didSet {
             if self.iconType == .font {
                 updateIconLabelColor()
@@ -103,7 +103,7 @@ open class SkyFloatingLabelTextFieldWithIcon: SkyFloatingLabelTextField {
 
     /// A UIColor value that determines the color of the icon when the control is selected
     @IBInspectable
-    dynamic open var selectedIconColor: UIColor = UIColor.gray {
+    @objc dynamic open var selectedIconColor: UIColor = UIColor.gray {
         didSet {
             updateIconLabelColor()
         }
@@ -111,7 +111,7 @@ open class SkyFloatingLabelTextFieldWithIcon: SkyFloatingLabelTextField {
 
     /// A float value that determines the width of the icon
     @IBInspectable
-    dynamic open var iconWidth: CGFloat = 20 {
+    @objc dynamic open var iconWidth: CGFloat = 20 {
         didSet {
             updateFrame()
         }
@@ -122,7 +122,7 @@ open class SkyFloatingLabelTextFieldWithIcon: SkyFloatingLabelTextField {
      Use this value to position the icon more precisely horizontally.
      */
     @IBInspectable
-    dynamic open var iconMarginLeft: CGFloat = 4 {
+    @objc dynamic open var iconMarginLeft: CGFloat = 4 {
         didSet {
             updateFrame()
         }
@@ -133,7 +133,7 @@ open class SkyFloatingLabelTextFieldWithIcon: SkyFloatingLabelTextField {
      Use this value to position the icon more precisely vertically.
      */
     @IBInspectable
-    dynamic open var iconMarginBottom: CGFloat = 4 {
+    @objc dynamic open var iconMarginBottom: CGFloat = 4 {
         didSet {
             updateFrame()
         }
